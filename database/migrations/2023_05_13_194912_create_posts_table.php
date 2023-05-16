@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('content', 255);
             $table->bigInteger('category_id')->unsigned()->index();
-            $table->bigInteger('region_id')->unsigned()->index();
+            $table->bigInteger('region_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('region_id')->references('id')->on('regions');
             $table->timestamps();

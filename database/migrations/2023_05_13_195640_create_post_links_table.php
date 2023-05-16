@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('post_links', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->text('url');
             $table->bigInteger('post_id')->unsigned();
             $table->foreign('post_id')->references('id')->on('posts');

@@ -14,7 +14,6 @@ return new class extends Migration
             $table->text('url');
             $table->bigInteger('post_id')->unsigned();
             $table->foreign('post_id')->references('id')->on('posts');
-            $table->timestamps();
         });
     }
 

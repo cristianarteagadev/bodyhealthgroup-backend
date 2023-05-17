@@ -25,6 +25,8 @@ class Post extends Model
         'billing_notice',
     ];
 
+    protected $dateFormat = 'Y-m-d h:i:s';
+
     public function category() {
         return $this->belongsTo(Category::class);
     }

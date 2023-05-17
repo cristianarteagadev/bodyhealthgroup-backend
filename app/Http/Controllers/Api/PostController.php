@@ -38,7 +38,7 @@ class PostController extends Controller
             }
             $post->save();
 
-            if ($request->has('links')) {
+            if ($request->has('links')) { //links
                 foreach ($data['links'] as $linkData) {
                     $link = new PostLinks;
                     $link->name = $linkData['name'];
@@ -47,7 +47,7 @@ class PostController extends Controller
                     $link->save();
                 }
             }
-
+            
             if ($request->has('tags')) {
                 foreach ($data['tags'] as $tagData) {
                     $tag = new PostTags;
